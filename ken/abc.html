@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Webcam</title>
+    <!-- Dr.F 2022, 12.26.22 -->
+    <style>
+        body {
+            background-color: #ffcc99;
+            font-family: cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h2 {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        video {
+            border: 5px solid white;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: none; /* Hide initially */
+        }
+        button {
+            background-color: aquamarine;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Human-Computer Interaction Webcam</h2>
+    <video id="webcam" width="640" height="480" autoplay></video>
+
+    <button id="toggleButton" onclick="toggleCam()">Turn ON</button>
+    <h1 id="webcamoff"></h1>
+
+    <script>
+        let stream = null;
+
+        async function startCam() {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                document.getElementById('webcam').srcObject = stream;
+                document.getElementById('toggleButton').innerText = "Turn OFF";
+                document.getElementById('webcamoff').innerText = "";
+                document.getElementById('webcam').style.display = "block"; // Show video
+            } catch (err) {
+                console.error('Error accessing webcam: ', err);
+            }
+        }
+
+        function stopCam() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                document.getElementById('webcam').srcObject = null;
+                document.getElementById('toggleButton').innerText = "Turn ON";
+                document.getElementById('webcamoff').innerText = "Your webcam is turned off!";
+                document.getElementById('webcam').style.display = "none"; // Hide video
+                stream = null;
+            }
+        }
+
+        function toggleCam() {
+            if (stream) {
+                if (confirm("Are you sure you want to turn off the webcam?")) {
+                    stopCam();
+                }
+            } else {
+                startCam();
+            }
+        }
+    </script>
+
+</body>
+</html>

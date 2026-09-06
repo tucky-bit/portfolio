@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandeur</title>
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.mim.css">
+    <script href="https://cdnl.jsdelivr.net.npm.bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+        
+        .div {
+            border-top: 772px solid white;
+            width: 100%;
+            height: auto;
+        }
+        .border-top {
+            border-top: 275px solid rgb(166, 130, 94);
+            width: 100%;
+            height: auto;
+        }
+        .border-bottom {
+            border-bottom: 525px solid white;
+            width: 100%;
+            height: auto;
+        }
+        .border-bottom1 {
+            border-bottom: 160px solid rgb(166, 130, 94);
+            width: 100%;
+            height: auto;
+        }
+        
+        #search-container {
+      display: flex;
+      margin-top: 5px;
+    }
+    #search-box {
+        position: absolute;
+        top: 13px;
+        left: 73%;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 8px 12px;
+      font-size: 16px;
+      width: 15%;
+    }
+    
+
+    .log-in {
+            right: 3.5%;
+            top: 15px;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer; 
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+  color: black;
+  border-radius: 30px;
+  width: 6%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;      
+        }
+        .log-in:hover {
+            opacity: 0.7;
+        }
+        .sign-in {
+            left: 63%;
+            top: 15px;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer; 
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+  color: black;
+  border-radius: 30px;
+  width: 7%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;      
+        }
+        .sign-in:hover {
+            background-color:#625148;
+            color: white;
+        }
+        .cart-icon {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            cursor: pointer;
+        }
+        
+.cart-icon1 {
+            position: absolute;
+            left: 85%;
+            top: 360px;
+            cursor: pointer;
+        }
+        .cart-icon2 {
+            position: absolute;
+            left: 85%;
+            top: 360px;
+            cursor: pointer;
+        }
+        .about {
+            left: 41%;
+            top: 15px;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer; 
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 7%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+ }    
+        .about:hover {
+            background-color:#625148;
+            color: white;
+        }
+        .home {
+            left: 30%;
+            top: 15px;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer; 
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 7%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+ }    
+        .home:hover {
+            background-color:#625148;
+            color: white;
+        }
+        .shop {
+            left: 52%;
+            top: 15px;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer; 
+            color: black;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 7%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+        }
+        .shop:hover {
+            background-color:#625148;
+           color:white;
+        }
+        .information-main {
+            font-size: 20px;
+            position: absolute;
+            left: 8%;
+            top: 1610px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .follow {
+            font-size: 18px;
+            position: absolute;
+            left: 50%;
+            top: 1602px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .infa {
+            font-size: 16px;
+            position: absolute;
+            left: 50%;
+            top: 1622px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .information {
+            font-size: 16px;
+            position: absolute;
+            left: 69%;
+            top: 1622px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .contact {
+            font-size: 18px;
+            position: absolute;
+            left: 69%;
+            top: 1602px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .info-main {
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 20px;
+            position: absolute;
+            left: 28%;
+            right: 25%;
+            top: 280px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .info {
+            line-height: 0.6;
+            font-size: 30px;
+            position: absolute;
+            left: 47%;
+            top: 800px;
+            cursor: pointer;
+            color: white;
+        }
+        .info1 { 
+            font-size: 20px;
+            letter-spacing: 1px;
+            position: absolute;
+            left: 47%;
+            top: 975px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .top-picks {
+            font-size: 40px;
+            position: absolute;
+            left: 45%;
+            top: 1075px;
+            cursor: pointer;
+        }
+        .img {
+            position: absolute;
+            cursor: pointer;
+            left: 0px;
+            top: 9px;
+}
+        .img1 {
+            position: absolute;
+            cursor: pointer;
+            left: .5%;
+            right: 48%;
+            top: 60px;        
+        }
+        .img2 {
+            position: absolute;
+            cursor: pointer;
+            left: 50%;
+            right: .5%;
+            top: 60px;
+        }
+        .img3 {
+            position: absolute;
+            cursor: pointer;
+            left: .5%;
+            right: 55%;
+            top: 785px;
+        }
+        .imglogo {
+            position: absolute;
+            cursor: pointer;
+            left: 33%;
+            top: 660px;
+        }
+        .imglogo:hover {
+            opacity: 0.2;
+        }
+        .imglogo1 {
+            position: absolute;
+            cursor: pointer;
+            left: 43%;
+            top: 660px;
+        }
+        .imglogo1:hover {
+            opacity: 0.2;
+        }
+        .imglogo2 {
+            position: absolute;
+            cursor: pointer;
+            left: 53%;
+            top: 660px;
+        }
+        .imglogo2:hover {
+            opacity: 0.2;
+        }
+        .imglogo3 {
+            position: absolute;
+            cursor: pointer;
+            left: 63%;
+            top: 660px;
+        }.imglogo3:hover {
+            opacity: 0.2;
+        }
+        .earrings {    
+            font-style:italic;   
+            letter-spacing: 1px;
+            font-weight: bold;    
+            font-size: 20px;
+            position: absolute;
+            left: 32%;
+            top: 730px;
+            cursor: pointer;           
+        }
+        .necklace {    
+            font-style:italic;   
+            letter-spacing: 1px;
+            font-weight: bold;    
+            font-size: 20px;
+            position: absolute;
+            left: 42%;
+            top: 730px;
+            cursor: pointer;           
+        }
+        .rings {    
+            font-style:italic;   
+            letter-spacing: 1px;
+            font-weight: bold;    
+            font-size: 20px;
+            position: absolute;
+           left: 53.2%;
+            top: 730px;
+            cursor: pointer;           
+        }
+        .bracelets {    
+            font-style:italic;   
+            letter-spacing: 1px;
+            font-weight: bold;    
+            font-size: 20px;
+            position: absolute;
+            left: 62%;
+            top: 730px;
+            cursor: pointer;           
+        }
+        .price {
+  color: darkgoldenrod;
+  font-size: 22px;
+}
+        div.loop-earrings {
+  left:26.5%;
+  width: 21%;
+  font-size: 14px;
+  font-weight: 5px;
+  line-height: 0.6;
+  cursor: pointer;
+  position: absolute;           
+  top: 1140px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+div.loop-earrings img {
+    width: 100%;
+  height: 320px;
+} 
+.loop-earrings:hover img {
+  opacity: 0.5;
+}
+div.clip-bracelet {
+    right: 26.5%;
+  width: 21%;
+  font-size: 14px;
+  font-weight: 5px;
+  line-height: 0.6;
+  cursor: pointer;
+  position: absolute;           
+  top: 1140px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+div.clip-bracelet img {
+    width: 100%;
+  height: 320px;
+}
+.clip-bracelet:hover img {
+  opacity: 0.5;
+}
+     
+    </style>
+</head>
+<body>
+    <div class="loop-earrings">
+        <a target="_blank" href="Loop Earring.jpg">
+          <img src="images/Loop Earring.jpg" width="600" height="400">
+        </a>
+        <h1>&nbsp;Loop Earrings</h1>
+        <p class="price">&nbsp;Php79.00</p>
+        <p class="cart-icon1"><i class="fa fa-shopping-cart" style="font-size:20px; color:darkslategrey;"></i></p>
+      </div>
+      <div class="clip-bracelet">
+        <a target="_blank" href="Clip Bracelet.jpg">
+          <img src="images/Clip Bracelet.jpg" width="600" height="400">
+        </a>
+        <h1>&nbsp;Clip Bracelet</h1>
+        <p class="price">&nbsp;Php99.00</p>
+        <p class="cart-icon2"><i class="fa fa-shopping-cart" style="font-size:20px; color:darkslategrey;"></i></p>
+      </div>
+   
+    <div class="div">
+        <a href="Main.html">
+            <div class="home">HOME</div> </a>
+        <a href="Log in.html">
+            <div class="log-in">LOG IN</div> </a>
+        <a href="Sign up form.html">
+        <div class="sign-in">SIGN IN</div></a>
+        <a href="About.html">
+            <div class="about"> ABOUT </div></a>
+            <a href="Earringpage.html">
+            <div class="shop"> SHOP </div></a>
+            <div id="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                
+            </div>
+          <div class="border-top"></div>
+          <div class="border-bottom"></div>
+          <div class="border-bottom1">
+            <div class="information-main">
+                <p>GRANDEUR</p>
+                <p>HIGH QUALITY ACCESSORIES</p>
+              </div>
+              <div class="follow">FOLLOW US:</div>
+            <div class="infa">
+                <p>INSTAGRAM: <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fby.grandeur%3Figsh%3DMWczanE3NGszNmFmaw%253D%253D&h=AT0w7DSnA5_eJyaZeK0Rd0hE2zJxFRFKz-2UMRaO3ayMoXskJl-V9x7P94quWChd-QQXMp3GAIBJ0uOCsUu0q_fsKjNnwLk7Dy26fGs7s91lL8zCOFoi5AF4Rpabs0xWmiPySQ" style="color:white">@by.grandeur</a></p>
+                <p>FACEBOOK: <a href="https://www.facebook.com/ByGrandeur?mibextid=LQQJ4d" style="color:white">@By.grandeur</a></p>
+            </div>
+            <div class="information">
+                <p>Location: Iloilo City</p>
+                <p>Mobile: #09056624170</p>
+                <p>Email: <a href="#" style="color:white">grandeur@gmail.com</a></p>
+            </div>
+            <div class="contact">CONTACT US:</div>
+          </div>
+          <div class="img"><img src="images/logo.png" width="160" height="45"></div>
+          <div class="img1"><img src="images/image.jpg" width="98.5%" height="575"></div>
+          <div class="img2"><img src="images/image1.jpg" width="100%" height="575"></div>
+          <div class="img3"><img src="images/image2.png" width="100%" height="230"></div>
+          <a href="Earringpage.html">
+          <div class="imglogo"><img src="images/earringlogo.png" width="60" height="60"></div></a>
+          <a href="Necklacepage.html">
+          <div class="imglogo1"><img src="images/necklacelogo.png" width="60" height="60"></div></a>
+          <a href="Ringspage.html">
+          <div class="imglogo2"><img src="images/ringlogo.png" width="60" height="60"></div></a>
+          <a href="Braceletpage.html">
+          <div class="imglogo3"><img src="images/braceletlogo.png" width="60" height="60"></div></a>
+          <a href="Cart.html">
+            <div class="cart-icon"><i class="fa fa-shopping-cart" style="font-size:30px; color:darkslategrey;">
+            </i></div></a>
+      <div class="earrings"> Earrings </div>
+      <div class="necklace"> Necklace </div>
+      <div class="rings"> Rings </div>
+      <div class="bracelets"> Bracelets </div>
+    <div class="top-picks">Top Picks</div>
+    <div class="info-main">
+        <p>Accentuate your style with accessories by grandeur!</p>
+        <h1>HIGH QUALITY ACCESSORIES</h1>
+    </div>
+    <div class="info">
+        <h1>GET UP TO 10%</h1>
+        <h1>OFF</h1>
+    </div>
+    <div class="info1"><p>Accessorize your life with elegance and style</p></div>
+
+    <footer>
+        <center>
+          <h4>All right reserved @ 2024</h4>
+        </center>
+      </footer>
+
+    <div class="earrings" onclick="goTo()">Earrings</div>
+    <div class="necklace" onclick="goTo1()">Necklace </div>
+    <div class="rings" onclick="goTo2()">Rings</div>
+    <div class="bracelets" onclick="goTo3()">Bracelets</div>
+  
+    
+    <script>
+        function goTo() {
+            window.location.href = "Earringpage.html"; 
+        }
+        function goTo1() {
+            window.location.href = "Necklacepage.html"; 
+        }
+        function goTo2() {
+          window.location.href = "Ringspage.html";
+        }
+        function goTo3() {
+          window.location.href = "Braceletpage.html";
+        }
+    
+    </script>
+</body>
+</html>

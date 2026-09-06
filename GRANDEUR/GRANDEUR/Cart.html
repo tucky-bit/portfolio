@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="images/cart-icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .h1 {
+            border-top: 45px solid rgb(166, 130, 94);
+            width: 100%;
+        }
+        .border-top {
+            border-top: 650px solid white;
+            width: 100%;
+        }
+        .border-bottom {
+            border-bottom: 160px solid rgb(166, 130, 94);
+            width: 100%;
+        }
+        .sign-in {
+          position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            right: 6%;
+            top: 72px;
+            cursor: pointer; 
+            color: black;         
+        }
+        .sign-in:hover {
+          opacity: 0.5;
+        }
+        .cart-icon {
+            position: absolute;
+            right: 2.5%;
+            top: 75px;
+            cursor: pointer;
+        }
+        .home {
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            left: 25px;
+            top: 75px;
+            cursor: pointer;
+            border: 1px solid rgb(255, 255, 255);
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 20px;
+  width: 90px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .home:hover  {
+          opacity: 0.2;
+          background-color:bisque;
+}
+.info-main {
+            font-size: 20px;
+            position: absolute;
+            left: 8%;
+            top: 725px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .follow {
+            font-size: 18px;
+            position: absolute;
+            left: 50%;
+            top: 723px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .infa {
+            font-size: 16px;
+            position: absolute;
+            left: 50%;
+            top: 740px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .info {
+            font-size: 16px;
+            position: absolute;
+            left: 69%;
+            top: 740px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .contact {
+            font-size: 18px;
+            position: absolute;
+            left: 69%;
+            top: 723px;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .caption {
+            font-variant: small-caps;
+            font-size: 38px;
+            position: absolute;
+            left: 8%;
+            top: 150px;
+            cursor: pointer;
+        }
+.container {
+  position: absolute;
+  top: 150px;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 500px; 
+  background-color: whitesmoke;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container1 {
+  position: absolute;
+  top: 195px;
+  left: 68%;
+  width: 22%;
+  height: 400px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.cart-total {
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 7%;
+  font-weight: 900;
+}
+.total {
+  position: absolute;
+  font-size: 20px;
+  top: 125px;   
+  left: 7%;
+  font-weight: 900;
+}
+.amount {
+  position: absolute;
+  font-size: 18px;
+  top: 127px;   
+  right: 10%;
+  font-weight: 900;
+}
+.sub-total {
+  position: absolute;
+  top: 75px;
+  left: 10%;
+  font-size: 12px;
+  font-style: normal;
+  color: darkgray;
+}
+.free {
+  position: absolute;
+  left: 75%;
+  top: 75px;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  color: darkgray;
+  font-weight:600;
+}
+.proceed-btn {
+  top: 120px;
+  left: 20%;
+  right: 20%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin-top: 100Px;
+  position: absolute;
+  cursor: pointer; 
+}
+.proceed-btn:hover {
+  background-color: grey;
+}
+.continue {
+  top: 255px;
+  left: 32%;
+  right: 20%;
+  color: grey;
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer; 
+}
+  
+#line {
+  position: absolute;
+top: 375px;
+left: 8%;
+	width: 50%;
+	height: 2px;
+	background-color: grey;
+}
+#line1 {
+  position: absolute;
+  top: 525px;
+  left: 8%;
+	width: 50%;
+	height: 1.5px;
+	background-color: grey;
+}
+#line2 {
+  position: absolute;
+  top: 330px;
+  left: 70%;
+	width: 18%;
+	height: 2px;
+	background-color: black;
+}
+.product-image img {
+    position: absolute;
+    top: 260px;
+    left: 11%;
+  width: 6.5%;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.product-details {
+    position: absolute;
+    line-height: 0.8;
+    top: 265px;
+    left: 17%;
+  width: 15%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.price {
+  font-weight: bolder;
+  color: coral;
+}
+.logo {
+  position: absolute;
+    top: 140px;
+    left: 3%;
+    cursor: pointer;
+}
+.product-image1 img {
+    position: absolute;
+    top: 410px;
+    left: 11%;
+  width: 6.5%;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.product-details1 {
+    position: absolute;
+    line-height: 0.8;
+    top: 415px;
+    left: 17%;
+  width: 15%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.price1 {
+  font-weight: bolder;
+  color: coral;
+}
+.logo1 {
+  position: absolute;
+    top: 295px;
+    left: 3%;
+    cursor: pointer;
+}
+.counter-container {
+            position: absolute;
+            top: 300px;
+            left: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .counter-button {
+            background-color: whitesmoke;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .counter {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .counter-container1 {
+            top: 450px;
+            left: 45%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }
+        .counter-button1 {
+            background-color: whitesmoke;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        .counter1 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+</style>
+</head>
+<body>
+  <div class="h1"></div>
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+    <div class="home"><p>HOME</p></div>
+    <div class="container">
+      <div class="logo"><img src="images/cart logo.png" width="30" height="30"></div>
+      <div class="logo1"><img src="images/cart logo.png" width="30" height="30"></div>
+    </div>
+    <div class="container1">
+    <p class="cart-total">CART TOTALS</p>
+    <p class="total">TOTAL:</p>
+    <p class="amount">Php449</p>
+    <i class="sub-total"><p>Shipping (5-7 business days)</p>
+    <h4>SUBTOTAL:</h4></i>
+    <i class="free"><p>FREE</p>
+    <p>Php449</p></i>
+    <button class="proceed-btn">PROCEED TO CHECKOUT</button>
+    <a href="Main.html">
+<p class="continue">❮ CONTINUE SHOPPING</p></a>
+  </div>
+    <a href="Sign up form.html">
+      <div class="sign-in"><p>LOG IN</p></div></a>
+      <div class="cart-icon"><i class="fa fa-shopping-cart" style="font-size:35px; color:darkslategrey;">
+      </i></div></a>
+      <div class="caption"><p>YOUR CART</p></div>
+      <div id="line"></div>
+      <div id="line1"></div>
+      <div id="line2"></div>
+    <div class="info-main">
+      <p>GRANDEUR</p>
+      <p>HIGH QUALITY ACCESSORIES</p>
+  </div>
+  <div class="follow">FOLLOW US:</div>
+  <div class="infa">
+    <p>INSTAGRAM: <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fby.grandeur%3Figsh%3DMWczanE3NGszNmFmaw%253D%253D&h=AT0w7DSnA5_eJyaZeK0Rd0hE2zJxFRFKz-2UMRaO3ayMoXskJl-V9x7P94quWChd-QQXMp3GAIBJ0uOCsUu0q_fsKjNnwLk7Dy26fGs7s91lL8zCOFoi5AF4Rpabs0xWmiPySQ" style="color:white">@by.grandeur</a></p>
+    <p>FACEBOOK: <a href="https://www.facebook.com/ByGrandeur?mibextid=LQQJ4d" style="color:white">@By.grandeur</a></p>
+  </div>
+  <div class="info">
+      <p>Location5: Iloilo City</p>
+      <p>Mobile: #09056624170</p>
+      <p>Email: <a href="#" style="color:white">grandeur@gmail.com</a></p>
+  </div>
+  <div class="contact">CONTACT US:</div>
+  <div class="counter-container">
+    <button class="counter-button minus">-</button>
+    <span class="counter">1</span>
+    <button class="counter-button plus">+</button>
+</div>
+<div class="counter-container1">
+  <button class="counter-button minus">-</button>
+  <span class="counter">1</span>
+  <button class="counter-button plus">+</button>
+</div>
+  <div class="product-image">
+    <img src="images/Ethereal.jpeg">
+  </div>
+  <div class="product-details">
+    <h2>Ethereal Necklace</h2>
+    <p>Size: 18 inches</p>
+      <h3>Price: <span class="price">Php250.00</span></h3>
+    </div>
+  <div class="product-image1">
+    <img src="images/Serenity Bangles.jpg">
+  </div>
+  <div class="product-details1">
+    <h2>Serenity Bangles</h2>
+    <p>SOLD by Set</p>
+      <h3>Price: <span class="price1">Php199.00</span></h3>
+    </div>
+
+  
+  <footer>
+    <center>
+      <h4>All right reserved @ 2024</h4>
+    </center>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="home" onclick="goBack()"><p>HOME</p></div>
+  <script>
+      function goBack() {
+    window.location.href = "Main.html";
+  }
+
+  const minusButton1 = document.querySelectorAll('.minus')[0];
+    const plusButton1 = document.querySelectorAll('.plus')[0];
+    const counter1 = document.querySelectorAll('.counter')[0];
+    let count1 = 0;
+
+    minusButton1.addEventListener('click', () => {
+        count1--;
+        counter1.textContent = count1;
+    });
+
+    plusButton1.addEventListener('click', () => {
+        count1++;
+        counter1.textContent = count1;
+    });
+
+    
+    const minusButton2 = document.querySelectorAll('.minus')[1];
+    const plusButton2 = document.querySelectorAll('.plus')[1];
+    const counter2 = document.querySelectorAll('.counter')[1];
+    let count2 = 0;
+
+    minusButton2.addEventListener('click', () => {
+        count2--;
+        counter2.textContent = count2;
+    });
+
+    plusButton2.addEventListener('click', () => {
+        count2++;
+        counter2.textContent = count2;
+    });
+  </script>
+</body>
+</html>
